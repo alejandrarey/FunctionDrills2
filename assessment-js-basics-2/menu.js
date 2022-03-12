@@ -32,7 +32,14 @@
 
 //CODE HERE
 
-
+let pizza = {
+    'name': 'Marguerita',
+    'price': 10,
+    'category': 'entree',
+    'popularity': 10,
+    'rating': 5,
+    'tags': ['pizza', 'italian', 'marguerita', 'yum']
+}
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -43,7 +50,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -53,7 +60,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.tags[1])
 
 /*
     Third, destructure the price off of the
@@ -63,7 +70,8 @@
 */
 
 //CODE HERE
-
+let {price} = pizza
+console.log(price)
 
 /*
     Fourth, and last, destructure the category
@@ -74,7 +82,8 @@
 
 //CODE HERE
 
-
+let {category} = pizza
+console.log(category)
 //////////////////PROBLEM 3////////////////////
 /* 
     Create an array with about 5 objects in it.
@@ -89,7 +98,48 @@
 
 //CODE HERE
 
-
+let foodArr = [
+    {
+    'name': 'Pepperoni Pizza',
+    'price': 10,
+    'category': 'pizza',
+    'popularity': 10,
+    'rating': 5,
+    'tags': ['pizza', 'italian', 'Pepperoni']
+},
+{
+    'name': 'Cheese Burger',
+    'price': 12,
+    'category': 'Burger',
+    'popularity': 11,
+    'rating': 3,
+    'tags': ['burger', 'cheese', 'bread']
+},
+{
+    'name': 'Chicken Tenders',
+    'price': 14,
+    'category': 'entree',
+    'popularity': 15,
+    'rating': 4,
+    'tags': ['chicken', 'kids', 'kids menu']
+},
+{
+    'name': 'Tacos al Pastor',
+    'price': 6,
+    'category': 'apetizer',
+    'popularity': 10,
+    'rating': 5,
+    'tags': ['tacos', 'mexican', 'pastor']
+},
+{
+    'name': 'hot dog',
+    'price': 7,
+    'category': 'appetizer',
+    'popularity': 2,
+    'rating': 3,
+    'tags':['hotdogs', 'american food', 'fast food'],
+},
+]
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -105,7 +155,12 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter(elem => elem.tags.includes('hotdogs'))
+
+
+
+console.log(filteredFood)
+
 
 
 
@@ -149,7 +204,7 @@
 */
 
 //CODE HERE
-
+ const filterByProperty = (property, number, type) => 
 
 /*
     Invoke the `filterByProperty` function passing
