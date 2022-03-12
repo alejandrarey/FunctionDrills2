@@ -35,7 +35,10 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.reduce((a, c) => a + c.price, 0)
+
+console.log(summedPrice)
+
 
 
 //////////////////PROBLEM 2////////////////////
@@ -55,7 +58,11 @@ const cart = [
 
 //CODE HERE
 
-
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+    return cartTotal + (cartTotal * tax) - couponValue
+    
+}
+console.log(calcFinalPrice(100, 10, 0.05))
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -79,7 +86,16 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
-
+The Customer Model for a Cart page should have:
+Customer Name: string, to identify the customer
+Items in cart: array with the items that customer chose to buy
+Customer Delivery address: string, for delivery's purposes and availability
+Billing name: strint to idenify payor
+payment type: a string or boolean that direct to the specified payment type
+card number: number to identify the card 
+card security code: number tha validates the card
+card expeiration date: string to validate card
+billing address: string for billing references
 */
 
 /*
@@ -88,3 +104,16 @@ const cart = [
 */
 
 //CODE HERE
+
+let customerObject = {
+    'customerName': 'Matias',
+    'items': ['pepperoni pizza', 'regular coke'],
+    'customerDeliveryAddress': '123 Utah Street, 84036 Utah',
+    'billingName': 'Jon',
+    'paymentType': 'applePay',
+    'cardNumber': 12345678903214,
+    'cardSecurityCode': 000,
+    'cardExpDate': '01/01/2050',
+    'billingAddress': '321 Utah Street, 84036 Utah',
+       
+}
