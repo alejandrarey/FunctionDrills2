@@ -20,7 +20,13 @@
 */
 
 //CODE HERE
-
+class Employee {
+    constructor({name='', shifts=''}) {
+        this.name = name
+        this.shifts = shifts
+    }
+    getSchedule() {console.log(`${this.name} works on ${this.shifts}`)}
+}
 
 
 /*
@@ -35,6 +41,8 @@
 
 //CODE HERE
 
+const empOne = new Employee({name:'Alejandra', shifts: 'Weekdays from 8 AM to 5 PM'})
+
 /*
     Call the `getSchedule` method on the
     `empOne` object.
@@ -42,7 +50,7 @@
 
 //CODE HERE
 
-
+empOne.getSchedule()
 /*
     Make a copy of the empOne object
     using the spread operator.
@@ -57,7 +65,9 @@
 
 //CODE HERE
 
+const empTwo = new Employee({ ...empOne,name: 'Nick'})
 
+empTwo.getSchedule()
 
 //////////////////PROBLEM 2////////////////////
 /*  
